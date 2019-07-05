@@ -15,7 +15,7 @@ char operacion;
 //void clean(void);
 int i=0,j=1;
 int clear=0;
-int contadorGlobal1=1, cont=0;
+int contadorGlobal1=1, cont=0,cont2=0;
 int contadorGlobal2=1;
 int contadorGlobal3=1;
 int contInt3=0;
@@ -23,16 +23,15 @@ int contInt3=0;
 
 #INT_TIMER0
 void TIMER0(){
-   contadorGlobal1*=2;
-   if(cont%3==0)
-   contadorGlobal2*=2;
-   if(cont%5==0)
-   contadorGlobal3*=2;
-   contInt3++;
+
    cont++;
-   if(cont==15)
-      cont=1;
-   set_timer0(3036);
+   if(cont%6==0 && cont2<numero1)
+      {
+      printf("%s"cadena);
+         cont2++;
+      }
+   
+   set_timer0(196);
 }
 
 
@@ -42,7 +41,7 @@ void main()
    enable_interrupts(INT_TIMER0 );
    enable_interrupts(GLOBAL);
    
-   set_timer0(3036);
+   set_timer0(196);
 
    printf("\fIngresa los datos siguiendo el orden dato,dato,operacion=\n");
    while(TRUE)
@@ -75,6 +74,8 @@ void main()
                j=0;
                puntero2=0;
                numero3=0;
+               cont=0;
+               cont2=0;
             }
    }
    
@@ -115,8 +116,9 @@ void main()
                 
                 
                 
-                printf("%s"caracter);
+               /* printf("%s"caracter);
                 printf("%s %d"cadena,numero1);
+                */
               // impresion y limpieza de variables ._.
               // clean();
               i=0;
@@ -134,15 +136,7 @@ void main()
             */
            
    }
-output_a(contadorglobal1);
-   if(contadorglobal1==256)
-      contadorglobal1=1;
-   output_b(contadorglobal2);
-   if(contadorglobal2==256)
-      contadorglobal2=1;
-   output_d(contadorglobal3);
-   if(contadorglobal3==256)
-      contadorglobal3=1;
+
       //TODO: User Code
    }
 

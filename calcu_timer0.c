@@ -31,7 +31,7 @@ void TIMER0(){
          cont2++;
       }
    
-   set_timer0(196);
+   set_timer0(28020);
 }
 
 
@@ -41,7 +41,7 @@ void main()
    enable_interrupts(INT_TIMER0 );
    enable_interrupts(GLOBAL);
    
-   set_timer0(196);
+   set_timer0(28020);
 
    printf("\fIngresa los datos siguiendo el orden >palabra;numero< \r\n donde la palabra sea maximo 10 y el numero este entre 0-9 \r\n para limpiar variables use >seguido de un enter \r\n");
    while(TRUE)

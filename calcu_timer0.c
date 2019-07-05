@@ -27,7 +27,7 @@ void TIMER0(){
    cont++;
    if(cont%6==0 && cont2<numero1)
       {
-      printf("%s"cadena);
+      printf("%s \r\n"cadena);
          cont2++;
       }
    
@@ -78,13 +78,7 @@ void main()
                cont2=0;
             }
    }
-   
 
-  /* if(caracter[i-1]=='=')
-   {
-         numero1=calcular1(caracter,puntero,flag,numero1,operacion,decimal1);
-      numero2=calcular2(caracter,puntero,flag,numero2,operacion,decimal2);
-   }*/
    
    if(calculo==1){//-1+2=
             
@@ -92,6 +86,8 @@ void main()
                {
                   puntero++;
                   cadena[puntero2]=caracter[puntero];
+                  if(cadena[puntero2]==59)
+                     cadena[puntero2]=null;
                   puntero2++;
                }
                numero1=operacion2(caracter,puntero,flag,numero1);
@@ -114,26 +110,10 @@ void main()
                
                
                 
-                
-                
-               /* printf("%s"caracter);
-                printf("%s %d"cadena,numero1);
-                */
-              // impresion y limpieza de variables ._.
-              // clean();
+
               i=0;
               calculo=0;
-             /* clean(&numero1,&numero2,&operacion,&puntero,&i,&calculo,&resultado);
-            for( clear=0; clear<22;clear++){
-                if(caracter[clear]!=0){
-                    caracter[clear]=0;
-                    cadena[clear]=0;
-               }
-               j=0;
-               puntero2=0;
-               numero3=0;
-            }
-            */
+           
            
    }
 

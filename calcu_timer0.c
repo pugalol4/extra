@@ -43,7 +43,7 @@ void main()
    
    set_timer0(196);
 
-   printf("\fIngresa los datos siguiendo el orden dato,dato,operacion=\n");
+   printf("\fIngresa los datos siguiendo el orden >palabra;numero< \r\n donde la palabra sea maximo 10 y el numero este entre 0-9 \r\n para limpiar variables use >seguido de un enter \r\n");
    while(TRUE)
    {
    if(kbhit()){
@@ -96,6 +96,7 @@ void main()
                
                if(numero1>9 || numero1 < 0 || puntero2>10)
                {
+                  printf("extension de la palabra o numero invalido \r\n");
                            clean(&numero1,&numero2,&operacion,&puntero,&i,&calculo,&resultado);
                      for( clear=0; clear<22;clear++){
                          if(caracter[clear]!=0){

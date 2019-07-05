@@ -78,17 +78,7 @@ void main()
             }
    }
    
-      if(contadorGlobal3==128 && contInt3>=1)
-      {
-         printf("%s"cadena);
-         contInt=0;
-      }
-      
-      if(contadorGlobal1==4 && contInt>=1 || contadorGlobal1==8 && contInt>=1)
-      {
-         printf("%s"cadena);
-         contInt=0;
-      }
+
   /* if(caracter[i-1]=='=')
    {
          numero1=calcular1(caracter,puntero,flag,numero1,operacion,decimal1);
@@ -97,26 +87,36 @@ void main()
    
    if(calculo==1){//-1+2=
             
-               numero1=operacion2(caracter,puntero,flag,numero1);
-               puntero=operacion3(caracter,puntero,flag,numero1);
-               numero2=operacion2(caracter,puntero,flag,numero2);
-               puntero=operacion3(caracter,puntero,flag,numero2);
-               numero3=operacion2(caracter,puntero,flag,numero3);
-               puntero=operacion3(caracter,puntero,flag,numero2);
-               while(puntero<(i-3))
+            while(caracter[puntero]!=59)
                {
                   puntero++;
                   cadena[puntero2]=caracter[puntero];
                   puntero2++;
                }
+               numero1=operacion2(caracter,puntero,flag,numero1);
+               puntero=operacion3(caracter,puntero,flag,numero1);
                
+               
+               if(numero1>9 || numero1 < 0 || puntero2>10)
+               {
+                           clean(&numero1,&numero2,&operacion,&puntero,&i,&calculo,&resultado);
+                     for( clear=0; clear<22;clear++){
+                         if(caracter[clear]!=0){
+                             caracter[clear]=0;
+                             cadena[clear]=0;
+                        }
+                        j=0;
+                        puntero2=0;
+                        numero3=0;
+                     }
+               }
                
                
                 
                 
                 
                 printf("%s"caracter);
-                printf("%d , %d , %d , %s"numero1,numero2,numero3,cadena);
+                printf("%s %d"cadena,numero1);
               // impresion y limpieza de variables ._.
               // clean();
               i=0;
